@@ -66,6 +66,7 @@ public class EmailController {
 				FileSystemResource file = new FileSystemResource(currentDir+"/Final_Report.pdf");
 				System.out.println(file.getFilename());
 				System.out.println(currentDir);
+				//Check if file exists
 				if(!file.exists())
 					System.out.println("File does not exists.......");
 				else
@@ -77,17 +78,6 @@ public class EmailController {
 				String fullPath = URLDecoder.decode(path, "UTF-8");
 				String pathArr[] = fullPath.split("/WEB-INF/classes/");
 				System.out.println(fullPath+"\n"+path);
-//				//Determine If There Is An File Upload. If Yes, Attach It To The Client Email				
-//				if ((attachFileObj != null) && (attachFileObj.getSize() > 0) && (!attachFileObj.equals(""))) {
-//					System.out.println("\nAttachment Name?= " + attachFileObj.getOriginalFilename() + "\n");
-//					mimeMsgHelperObj.addAttachment(attachFileObj.getOriginalFilename(), new InputStreamSource() {					
-//						public InputStream getInputStream() throws IOException {
-//							return attachFileObj.getInputStream();
-//						}
-//					});
-//				} else {
-//					System.out.println("\nNo Attachment Is Selected By The User. Sending Text Email!\n");
-//				}
 			}
 		});
 		
